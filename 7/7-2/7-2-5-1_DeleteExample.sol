@@ -1,4 +1,4 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.23;
 
 
 contract DeleteExample {
@@ -7,7 +7,7 @@ contract DeleteExample {
 
     uint[] dataArray;
 
-    function f() {
+    function f() public {
         uint x = data;
         delete x;
         delete data;

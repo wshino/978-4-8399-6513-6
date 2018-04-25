@@ -1,8 +1,11 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.23;
 
 
 contract Operator {
-    function Operator(){
+    constructor() public {
+        int a;
+        int e;
+
         // a = a + e
         a += e;
         // a = a - e

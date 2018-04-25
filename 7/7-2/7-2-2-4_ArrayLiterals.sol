@@ -1,12 +1,12 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.23;
 
 
 contract ArrayLiterals {
-    function f() {
+    function f() public pure {
         g([uint(1), 2, 3]);
     }
 
-    function g(uint[3] _data) {
+    function g(uint[3] _data) public pure {
         // ...
     }
 }

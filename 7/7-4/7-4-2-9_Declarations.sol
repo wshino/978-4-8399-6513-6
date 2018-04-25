@@ -1,9 +1,9 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.23;
 
 
 contract Declarations {
 
-    function foo() returns (uint) {
+    function foo() public pure returns (uint) {
         uint bar = 5;
         if (true) {
             bar += baz;

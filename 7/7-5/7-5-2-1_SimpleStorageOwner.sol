@@ -1,4 +1,4 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.23;
 
 
 contract SimpleStorageOwner {
@@ -7,7 +7,7 @@ contract SimpleStorageOwner {
 
     address owner;
 
-    function SimpleStorageOwner() {
+    constructor() public {
         owner = msg.sender;}
 
     modifier onlyOwner {
@@ -15,9 +15,9 @@ contract SimpleStorageOwner {
         _;
     }
 
-    function set(uint x) onlyOwner {
+    function set(uint x) onlyOwner public {
         storedData = x;}
 
-    function get() view returns (uint) {
+    function get() public view returns (uint) {
         return storedData;}
 }

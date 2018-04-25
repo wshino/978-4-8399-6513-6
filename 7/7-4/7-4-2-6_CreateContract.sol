@@ -1,11 +1,11 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.23;
 
 
 contract Target {
 
     uint x;
 
-    function Target(uint a) public payable {
+    constructor(uint a) public payable {
         x = a;
     }
 }

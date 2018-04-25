@@ -1,9 +1,9 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.23;
 
 
 contract Omitted {
 
-    function func(uint k, uint) returns (uint) {
+    function func(uint k, uint) public pure returns (uint) {
         return k;
     }
 }

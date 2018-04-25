@@ -1,8 +1,8 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.23;
 
 
 contract Units {
-    function f(){
+    function f() public pure {
         // 1wei
         1 wei;
         // 1,000,000,000,000wei

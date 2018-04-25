@@ -1,9 +1,9 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.23;
 
 
 contract ScopingErrors {
 
-    function scoping() {
+    function scoping() public pure {
         uint i = 0;
         while (i++ < 1) {
             uint same1 = 0;
@@ -13,7 +13,7 @@ contract ScopingErrors {
         }
     }
 
-    function minimalScoping() {
+    function minimalScoping() public pure {
         {
             uint same2 = 0;
         }
@@ -23,7 +23,7 @@ contract ScopingErrors {
         }
     }
 
-    function forLoopScoping() {
+    function forLoopScoping() public pure {
         for (uint same3 = 0; same3 < 1; same3++) {
 
         }

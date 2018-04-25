@@ -1,9 +1,9 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.23;
 
 
 contract Controls {
 
-    function f(uint _a, uint _b) returns (uint res) {
+    function f(uint _a, uint _b) public pure returns (uint res) {
         res = _a;
 
         if (1) {
