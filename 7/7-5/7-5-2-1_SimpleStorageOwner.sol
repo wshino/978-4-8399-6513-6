@@ -1,14 +1,14 @@
-pragma solidity ^0.4.0;
+pragma solidity ^0.4.24;
 
 
 contract SimpleStorageOwner {
 
     uint storedData;
-
     address owner;
 
-    function SimpleStorageOwner() {
-        owner = msg.sender;}
+    constructor() {
+        owner = msg.sender;
+    }
 
     modifier onlyOwner {
         require(msg.sender == owner);
