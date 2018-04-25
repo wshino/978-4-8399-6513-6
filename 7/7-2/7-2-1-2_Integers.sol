@@ -17,8 +17,8 @@ contract Integers {
         return 3 / 0;
     }
 
-    function shift() constant returns (uint[2]) {
-        uint[2] a;
+    function shift() pure returns (uint[2]) {
+        uint[2] memory a;
         a[0] = 16 << 2;
         a[1] = 16 >> 2;
         return a;
