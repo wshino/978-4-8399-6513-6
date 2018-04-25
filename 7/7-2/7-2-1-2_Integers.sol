@@ -3,17 +3,17 @@ pragma solidity ^0.4.16;
 
 contract Integers {
 
-    function getTwo() constant returns (uint) {
+    function getTwo() pure returns (uint) {
         uint a = 3;
         uint b = 2;
         return a / b * 2;
     }
 
-    function getThree() constant returns (uint) {
+    function getThree() pure returns (uint) {
         return 3 / 2 * 2;
     }
 
-    function divByZero() constant returns (uint) {
+    function divByZero() pure returns (uint) {
         return 3 / 0;
     }
 
