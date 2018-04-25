@@ -1,4 +1,4 @@
-pragma solidity ^0.4.0;
+pragma solidity ^0.4.16;
 
 
 contract ArrayContract {uint[2 ** 20] m_aLotOfIntegers;
