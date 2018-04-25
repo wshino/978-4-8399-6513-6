@@ -5,7 +5,7 @@ contract Address {
 
     function() payable {}
 
-    function getBalance(address _t) constant returns (uint) {
+    function getBalance(address _t) view returns (uint) {
         if (_t == address(0)) {
             _t = this;
         }

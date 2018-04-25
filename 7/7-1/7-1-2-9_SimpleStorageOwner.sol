@@ -19,7 +19,7 @@ contract SimpleStorageOwner {
         storedData = x;
     }
 
-    function get() constant returns (uint) {
+    function get() view returns (uint) {
         return storedData;
     }
 }
