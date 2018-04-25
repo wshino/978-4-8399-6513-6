@@ -1,4 +1,4 @@
-pragma solidity ^0.4.18;
+pragma solidity ^0.4.24;
 
 
 import "zeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
@@ -11,7 +11,7 @@ contract DappsToken is StandardToken {
 
     uint public decimals = 18;
 
-    function DappsToken(uint initialSupply) public {
+    constructor(uint initialSupply) public {
         totalSupply_ = initialSupply;
         balances[msg.sender] = initialSupply;
     }
