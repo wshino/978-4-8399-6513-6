@@ -11,7 +11,7 @@ contract DappsToken is StandardToken {
 
     uint public decimals = 18;
 
-    function DappsToken(uint initialSupply) public {
+    constructor(uint initialSupply) public {
         totalSupply_ = initialSupply;
         balances[msg.sender] = initialSupply;
     }
