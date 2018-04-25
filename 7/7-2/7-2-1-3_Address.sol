@@ -17,15 +17,11 @@ contract Address {
     }
 
     function send(address _to, uint _amount) {
-        if (!_to.send(_amount)) {
-            throw;
-        }
+        require(_to.send(_amount));
     }
 
     function call(address _to, uint _amount) {
-        if (!_to.call.value(_amount).gas(1000000)()) {
-            throw;
-        }
+        require(_to.call.value(_amount).gas(1000000)());
     }
 
     function withDraw() {
@@ -35,8 +31,6 @@ contract Address {
 
     function withDraw2() {
         address to = msg.sender;
-        if (!to.call.value(this.balance).gas(1000000)()) {
-            throw;
-        }
+        require(to.call.value(this.balance).gas(1000000)());
     }
 }
