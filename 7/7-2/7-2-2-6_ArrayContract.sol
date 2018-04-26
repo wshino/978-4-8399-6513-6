@@ -6,7 +6,8 @@ contract ArrayContract {uint[2 ** 20] m_aLotOfIntegers;
     bool[2][] m_pairsOfFlags;
 
     function setAllFlagPairs(bool[2][] newPairs) public {
-        m_pairsOfFlags = newPairs;}
+        m_pairsOfFlags = newPairs;
+    }
 
     function setFlagPair(uint index, bool flagA, bool flagB) public {
         m_pairsOfFlags[index][0] = flagA;

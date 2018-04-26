@@ -3,8 +3,8 @@ pragma solidity ^0.4.23;
 
 contract Operator {
     constructor() public {
-        int a;
-        int e;
+        int a = 10;
+        int e = 3;
 
         // a = a + e
         a += e;
