@@ -1,13 +1,13 @@
-pragma solidity ^0.4.0;
+pragma solidity ^0.4.23;
 
 
 contract DataLocation {
 
     uint[] x;
 
-    function f(uint[] memoryArray) {
+    function f(uint[] memoryArray) public {
         x = memoryArray;
-        var y = x;
+        uint[] y = x;
         y[7];
         y.length = 2;
         delete x;
@@ -17,7 +17,7 @@ contract DataLocation {
         h(x);
     }
 
-    function g(uint[] storage storageArray) internal {}
+    function g(uint[] storage storageArray) internal pure {}
 
-    function h(uint[] memoryArray) {}
+    function h(uint[] memoryArray) public pure {}
 }

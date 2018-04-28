@@ -1,4 +1,4 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.23;
 
 
 contract ClientReceipt {
@@ -10,6 +10,6 @@ contract ClientReceipt {
     );
 
     function deposit(bytes32 _id) public payable {
-        Deposit(msg.sender, _id, msg.value);
+        emit Deposit(msg.sender, _id, msg.value);
     }
 }

@@ -1,4 +1,4 @@
-pragma solidity ^0.4.0;
+pragma solidity ^0.4.23;
 
 
 contract Mappings {
@@ -10,12 +10,12 @@ contract Mappings {
 
     mapping (address => User) public users;
 
-    function addUser(string _name, string _email) {
+    function addUser(string _name, string _email) public {
         users[msg.sender].name = _name;
         users[msg.sender].email = _email;
     }
 
-    function getUser() returns (string, string){
+    function getUser() public view returns (string, string) {
         return (users[msg.sender].name, users[msg.sender].email);
     }
 }

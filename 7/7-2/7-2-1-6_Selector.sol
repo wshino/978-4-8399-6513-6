@@ -1,17 +1,17 @@
-pragma solidity ^0.4.0;
+pragma solidity ^0.4.23;
 
 
 contract Selector {
 
-    function e() returns (bytes4) {
+    function e() public pure returns (bytes4) {
         return this.e.selector;
     }
 
-    function f() returns (uint) {
+    function f() public pure returns (uint) {
         return g();
     }
 
-    function g() internal returns (uint) {
+    function g() internal pure returns (uint) {
         return 0;
     }
 }

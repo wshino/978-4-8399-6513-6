@@ -1,4 +1,4 @@
-pragma solidity ^0.4.0;
+pragma solidity ^0.4.23;
 
 
 contract Arrays {
@@ -7,7 +7,7 @@ contract Arrays {
 
     uint[] dArray;
 
-    function getFifteen() returns (uint) {
+    function getFifteen() public view returns (uint) {
         uint res = 0;
         for (uint i = 0; i < fArray.length; i++) {
             res = res + fArray[i];
@@ -15,7 +15,7 @@ contract Arrays {
         return res;
     }
 
-    function getDArray() returns (uint[]) {
+    function getDArray() public returns (uint[]) {
         dArray.push(2);
         dArray.push(3);
         return dArray;

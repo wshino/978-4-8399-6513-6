@@ -1,15 +1,15 @@
-pragma solidity ^0.4.0;
+pragma solidity ^0.4.23;
 
 
 contract Booleans {
 
-    function getTrue() constant returns (bool) {
+    function getTrue() public pure returns (bool) {
         bool a = true;
         bool b = false;
         return a || b;
     }
 
-    function getFalse() constant returns (bool) {
+    function getFalse() public pure returns (bool) {
         bool a = false;
         bool b = true;
         return a && b;

@@ -1,4 +1,4 @@
-pragma solidity ^0.4.0;
+pragma solidity ^0.4.23;
 
 
 contract Enum {
@@ -7,15 +7,15 @@ contract Enum {
     Colors color;
     Colors constant defaultColor = Colors.Green;
 
-    function setColor() {
+    function setColor() public {
         color = Colors.Blue;
     }
 
-    function getColor() returns (Colors) {
+    function getColor() public view returns (Colors) {
         return color;
     }
 
-    function getDefaultColor() returns (uint) {
+    function getDefaultColor() public pure returns (uint) {
         return uint(defaultColor);
     }
 }
