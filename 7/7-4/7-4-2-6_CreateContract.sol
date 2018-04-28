@@ -17,9 +17,11 @@ contract CreateContract {
 
     function createTarget(uint arg) public {
         Target newTarget = new Target(arg);
+        t = newTarget;
     }
 
     function createAndEndowTarget(uint arg, uint amount) public payable {
         Target newTarget = (new Target).value(amount)(arg);
+        t = newTarget;
     }
 }
