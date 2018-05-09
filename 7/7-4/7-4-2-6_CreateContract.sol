@@ -13,7 +13,7 @@ contract Target {
 
 contract CreateContract {
 
-    Target t = new Target(4);
+    Target t = new Target(4); // CreateContractのコンストラクタとして実行されます
 
     function createTarget(uint arg) public {
         Target newTarget = new Target(arg);
@@ -21,6 +21,7 @@ contract CreateContract {
     }
 
     function createAndEndowTarget(uint arg, uint amount) public payable {
+        // 作成と共にetherを送ります
         Target newTarget = (new Target).value(amount)(arg);
         t = newTarget;
     }

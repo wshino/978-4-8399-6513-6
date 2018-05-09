@@ -14,7 +14,7 @@ contract Structs {
         users.push(User(_name, _email));
     }
 
-    function getUser(uint _id) public view returns (string, string){
+    function getUser(uint _id) public returns (string, string){
         // User storage u = users[_id];
         // u.name = "changed";
         return (users[_id].name, users[_id].email);
