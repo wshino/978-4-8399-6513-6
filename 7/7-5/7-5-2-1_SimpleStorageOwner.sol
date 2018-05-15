@@ -2,7 +2,6 @@ pragma solidity ^0.4.23;
 
 
 contract SimpleStorageOwner {
-
     uint storedData;
     address owner;
 
@@ -11,7 +10,10 @@ contract SimpleStorageOwner {
     }
 
     modifier onlyOwner {
+        // コントラクトへの呼び出しがコントラクトの作成者かを確認する
+        // 違ったらrevertが発生します
         require(msg.sender == owner);
+        // _ は修飾子がつけられた関数を実行するという意味
         _;
     }
 

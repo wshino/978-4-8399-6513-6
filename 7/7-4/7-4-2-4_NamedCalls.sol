@@ -8,6 +8,7 @@ contract NamedCalls {
     }
 
     function g() public pure {
+        // key, valueの順番以外で呼び出します。ここではvalue, keyで関数f()を呼びます
         f({value : 2, key : 3});
     }
 }

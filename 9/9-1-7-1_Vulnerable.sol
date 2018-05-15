@@ -4,7 +4,7 @@ contract Vulnerable {
     }
     function doSomething() {
         require(this.balance > 0);
-        // The code below may be executed
+        // この下のコードが実行される可能性があります
         // ...
     }
 }

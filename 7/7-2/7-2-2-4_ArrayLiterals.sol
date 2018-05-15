@@ -2,6 +2,7 @@ pragma solidity ^0.4.23;
 
 
 contract ArrayLiterals {
+
     function f() public pure {
         g([uint(1), 2, 3]);
     }

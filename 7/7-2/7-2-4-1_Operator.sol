@@ -22,7 +22,7 @@ contract Operator {
         a &= e;
         // a = a ^ e
         a ^= e;
-        // increment and decrement
+        // インクリメントとデクリメント
         a++;
         a--;
     }

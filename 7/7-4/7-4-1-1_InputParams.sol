@@ -7,6 +7,7 @@ contract InputParams {
         _a;
     }
 
+    // _bを使っていないのであれば_bは書かなくても良い
     function taker(uint _a, uint) public pure {
         _a;
     }
