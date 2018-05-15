@@ -13,7 +13,7 @@
 　Chapter9. アプリケーション設計の注意点
 
 Initial 2018-01-31
-Revised 2018-03-25
+Revised 2018-05-15
 
 http://book.mynavi.jp/supportsite/detail/9784839965136.html
 
