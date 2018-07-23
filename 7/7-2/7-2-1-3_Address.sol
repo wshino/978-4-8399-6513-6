@@ -5,11 +5,8 @@ contract Address {
 
     constructor () public payable {}
 
-    function getBalance(address _t) public view returns (uint) {
-        if (_t == address(0)) {
-            _t = this;
-        }
-        return _t.balance;
+    function getBalance() public view returns (uint) {
+        return address(this).balance;
     }
 
     function transfer(address _to, uint _amount) public {
