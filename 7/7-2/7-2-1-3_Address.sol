@@ -3,7 +3,7 @@ pragma solidity ^0.4.23;
 
 contract Address {
 
-    function() public payable {}
+    constructor () public payable {}
 
     function getBalance(address _t) public view returns (uint) {
         if (_t == address(0)) {
